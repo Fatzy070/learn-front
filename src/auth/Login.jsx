@@ -23,7 +23,7 @@ const Login = () => {
   setMessage('');
 
   try {
-    const res = await axios.post('http://localhost:3000/api/login', { email, password });
+    const res = await axios.post('https://learn-backend-1g6i.onrender.com/api/login', { email, password });
 
     localStorage.setItem('token', res.data.token);
     localStorage.setItem('user', JSON.stringify(res.data.user));
@@ -43,7 +43,7 @@ const Login = () => {
 
   const handleGoogleLogin = async (credentialResponse) => {
     try {
-      const res = await axios.post('http://localhost:3000/api/google-login', {
+      const res = await axios.post('https://learn-backend-1g6i.onrender.com/api/google-login', {
         token: credentialResponse.credential,
       });
 
@@ -55,7 +55,7 @@ const Login = () => {
       navigate('/');
     } catch (error) {
       console.log('Error' , error.response?.data || error.message )
-      console.error('Google login error:', error.response?.data || error.message);
+      setMessage('Google login error:', error.response?.data || error.message);
     }
   };
 

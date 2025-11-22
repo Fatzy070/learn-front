@@ -16,7 +16,7 @@ const Video = () => {
       try {
        
         const res = await axios.get(
-          `http://localhost:3000/api/courses/video/${videoId}`,
+          `https://learn-backend-1g6i.onrender.com/api/courses/video/${videoId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setVideo(res.data.video);
@@ -34,7 +34,7 @@ const Video = () => {
   const enroll = async () => {
     try {
       const res = await axios.post(
-        `http://localhost:3000/api/courses/enroll`,
+        `https://learn-backend-1g6i.onrender.com/api/courses/enroll`,
         { videoId: video.videoId, title: video.title, thumbnail: video.thumbnail, playlistId: video.playlistId },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -50,7 +50,7 @@ const Video = () => {
   const unenroll = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:3000/api/courses/unenroll/${video.videoId}`,
+        `https://learn-backend-1g6i.onrender.com/api/courses/unenroll/${video.videoId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       toast.success(res.data.message);

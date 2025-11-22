@@ -29,7 +29,7 @@ const SignUp = () => {
           return setMessage("Full name is required");
       }
 
-            const res = await axios.post(`http://localhost:3000/api/signup` , {
+            const res = await axios.post(`https://learn-backend-1g6i.onrender.com/api/signup` , {
                 email , 
                 name:name.trim() , 
                 password , 
@@ -54,7 +54,7 @@ const SignUp = () => {
    const handleGoogleLogin = async (credentialResponse) => {
     setShowLoading(true);
     try {
-      const res = await axios.post('http://localhost:3000/api/google-login', {
+      const res = await axios.post('https://learn-backend-1g6i.onrender.com/api/google-login', {
         token: credentialResponse.credential,
       });
 

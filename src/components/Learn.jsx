@@ -11,7 +11,7 @@ const Learn = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/courses/userenroll`, {
+        const res = await axios.get(`https://learn-backend-1g6i.onrender.com/api/courses/userenroll`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -28,7 +28,7 @@ const Learn = () => {
   const unenroll = async (videoId) => {
     try {
       const res = await axios.delete(
-        `http://localhost:3000/api/courses/unenroll/${videoId}`,
+        `https://learn-backend-1g6i.onrender.com/api/courses/unenroll/${videoId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 

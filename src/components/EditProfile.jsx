@@ -20,7 +20,7 @@ const EditProfile = () => {
     const fetchUser = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:3000/api/me', {
+        const res = await axios.get('https://learn-backend-1g6i.onrender.com/api/me', {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -106,7 +106,7 @@ const EditProfile = () => {
       };
 
       const res = await axios.post(
-        `http://localhost:3000/api/edit-profile`,
+        `https://learn-backend-1g6i.onrender.com/api/edit-profile`,
         updateData,
         { headers: { Authorization: `Bearer ${token}` } }
       );

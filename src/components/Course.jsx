@@ -19,7 +19,7 @@ const Course = ({ limit, title, playlistId}) => {
         setLoadingVideos(true);
 
         const res = await axios.get(
-          `http://localhost:3000/api/courses/playlist/${playlistId}`,
+          `https://learn-backend-1g6i.onrender.com/api/courses/playlist/${playlistId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
 
@@ -42,7 +42,7 @@ const Course = ({ limit, title, playlistId}) => {
   const enroll = async (video) => {
     try {
       const res = await axios.post(
-        `http://localhost:3000/api/courses/enroll`,
+        `https://learn-backend-1g6i.onrender.com/api/courses/enroll`,
         {
           videoId: video.videoId,
           title: video.title,
@@ -68,7 +68,7 @@ const Course = ({ limit, title, playlistId}) => {
   const unenroll = async (videoId) => {
     try {
       const res = await axios.delete(
-        `http://localhost:3000/api/courses/unenroll/${videoId}`,
+        `https://learn-backend-1g6i.onrender.com/api/courses/unenroll/${videoId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
 

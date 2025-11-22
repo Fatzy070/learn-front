@@ -24,7 +24,7 @@ const Search = () => {
     const fetchResults = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`http://localhost:3000/api/courses/search`, {
+        const res = await axios.get(`https://learn-backend-1g6i.onrender.com/api/courses/search`, {
           headers: { Authorization: `Bearer ${token}` },
           params: { query },
         });
@@ -50,7 +50,7 @@ const Search = () => {
   const handleEnroll = async (video) => {
     try {
       const res = await axios.post(
-        `http://localhost:3000/api/courses/enroll`,
+        `https://learn-backend-1g6i.onrender.com/api/courses/enroll`,
         { videoId: video.videoId, title: video.title, thumbnail: video.thumbnail, playlistId: video.playlistId || "" },
         { headers: { Authorization: `Bearer ${token}` } }
       );

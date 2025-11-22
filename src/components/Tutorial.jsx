@@ -21,7 +21,7 @@ const Tutorial = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const res = await axios.get(`http://localhost:3000/api/courses/userenroll`, {
+        const res = await axios.get(`https://learn-backend-1g6i.onrender.com/api/courses/userenroll`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -73,7 +73,7 @@ const Tutorial = () => {
         // Send progress to backend every second
         try {
           await axios.post(
-            `http://localhost:3000/api/courses/progress/${videoId}`,
+            `https://learn-backend-1g6i.onrender.com/api/courses/progress/${videoId}`,
             { progress: percent },
             { headers: { Authorization: `Bearer ${token}` } }
           );

@@ -18,7 +18,7 @@ const NavBar = () => {
     const fetchUser = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:3000/api/me', {
+        const res = await axios.get('https://learn-backend-1g6i.onrender.com/api/me', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser(res.data.user);
