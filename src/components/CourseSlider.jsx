@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from 'swiper/modules';
+import { Navigation, FreeMode } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Skeleton from "react-loading-skeleton";
@@ -139,6 +139,9 @@ const CourseSlider = ({ playlistId, limit = 10, title }) => {
       
       <div className="relative">
         <Swiper
+          modules={[FreeMode, Navigation]}
+  freeMode={true}
+  grabCursor={true}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
             setSwiperReady(true);
@@ -163,18 +166,18 @@ const CourseSlider = ({ playlistId, limit = 10, title }) => {
               ))
             : videos.map((video, i) => (
                 <SwiperSlide key={i}>
-                  <div className="shadow-md rounded-lg overflow-hidden">
+                  <div className="shadow-md rounded-lg overflow-hidden border border-gray-600 ">
                     <iframe
                       width="100%"
                       height="180"
                       src={`https://www.youtube.com/embed/${video.videoId}`}
                       allowFullScreen
-                      className="rounded-t-lg"
+                      className="rounded-t-lg pointer-events-none"
                     ></iframe>
                     <div className="p-3">
                       <h2 className="text-sm font-semibold">
                         <span className="hidden md:block">
-                          {video.title.slice(0, 50) + "...."}
+                          {video.title.slice(0, 35) + "...."}
                         </span>
                         <span className="md:hidden block">
                           {video.title.slice(0, 30) + "...."}

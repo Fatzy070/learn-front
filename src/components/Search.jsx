@@ -105,7 +105,7 @@ const Search = () => {
       {/* Mobile search icon */}
       <div className="md:hidden">
         <button onClick={() => setOpen(true)} className="text-gray-500">
-          <IoIosSearch size={18} />
+          <IoIosSearch size={22} />
         </button>
       </div>
 

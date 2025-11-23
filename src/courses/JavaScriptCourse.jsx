@@ -6,7 +6,7 @@ const JavaScriptCourse = () => {
             <CourseSlider
   title="Trending Course"
   playlistId="PLU83Ru7iGtAtTlQ8MRGHCBu4tzATiRfmY"
-  limit={10}
+  limit={30}
 />
         </div>
     );

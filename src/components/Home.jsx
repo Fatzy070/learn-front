@@ -43,7 +43,7 @@ const fullname = user ? `${user.firstName} ${user.lastName || ''}` : ''
             <p className='text-center pt-10'>{message}</p>
         )}
 
-          <section className='flex items-center md:justify-start justify-center gap-[15px] my-5 md:m-8'>
+          <section className='flex items-center m-5 gap-[15px]  md:m-8'>
                 <div>
                     {user && (
                     <>

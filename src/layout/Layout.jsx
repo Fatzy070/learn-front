@@ -17,7 +17,7 @@ const Layout = () => {
   
     return (
         <div>
-            <div className={` md:m-0 sticky top-0 md:top-0 z-10 ${scrolled ? 'text-white   border backdrop-blur-md bg-black/70 md:border-none':'bg-transparent'}`}>
+            <div className={` md:m-0 sticky top-0 md:top-0 z-50 `}>
                 <Header />
             </div>
             <div className=' '>

@@ -46,7 +46,7 @@ const Footer = () => {
                             <a href="www.linkedin.com/in/faruk-ogunsola-394815312" className="p-2 bg-gray-800 hover:bg-blue-600 rounded-lg transition-all duration-300 transform hover:scale-110">
                                 <FaLinkedin className="text-gray-300 hover:text-white" />
                             </a>
-                            <a href="#" className="p-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-all duration-300 transform hover:scale-110">
+                            <a href="https://github.com/Fatzy070" className="p-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-all duration-300 transform hover:scale-110">
                                 <FaGithub className="text-gray-300 hover:text-white" />
                             </a>
                         </div>
@@ -107,8 +107,8 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <div className="flex items-center gap-2 text-gray-300">
+                <div className="border-t border-gray-800 space-y-4 md:space-y-0 pt-8 md:flex  md:flex-row justify-between items-center gap-4">
+                    <div className="flex items-center text-start gap-2 text-gray-300">
                         <span>Made with</span>
                         <FaHeart className="text-red-500 animate-pulse" />
                         <span>by Ogunsola Faruk aka Fatzy</span>
@@ -120,12 +120,14 @@ const Footer = () => {
                     </div>
 
                     {/* Scroll to Top */}
-                    <button 
+                    <section className='flex justify-center'>
+                        <button 
                         onClick={scrollToTop}
                         className="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-110 group"
                     >
                         <FaArrowUp className="text-white group-hover:animate-bounce" />
                     </button>
+                    </section>
                 </div>
             </div>
 

@@ -42,7 +42,7 @@ const fullName = user ? `${user.firstName} ${user.lastName || ""}`.trim() : "";
     <div>
       {/* Menu Button */}
    <button onClick={() => setShow(true)} className="md:hidden text-gray-500">
-        <IoMdMenu size={18} />
+        <IoMdMenu size={25} />
       </button>
 
       {/* BACKDROP (works now) */}

@@ -14,13 +14,16 @@ const Header = () => {
     return (
         <>
             {/* Mobile Header - Enhanced Layout */}
-            <section className='flex items-center py-3 px-4 justify-between md:hidden bg-white dark:bg-gray-900 shadow-lg border-b border-gray-200 dark:border-gray-800'>
+            <section className='flex items-center py-4 px-4 justify-between md:hidden bg-white dark:bg-gray-900 shadow-lg '>
                 <div>
                     <NavBar />
                 </div>
-                <div className='flex gap-2 items-center'>
-                    <FaGraduationCap size={28} color='#6c63ff'/>
-                    <h1 className='learn text-[1.2rem] font-bold text-gray-800 dark:text-white'>LearnHub</h1>
+                <div className='flex gap-2 items-center flex-shrink-0'>
+                    <div className="relative">
+                    <FaGraduationCap size={32} className="text-purple-400" />
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                    </div>
+                    <h1 className='learn text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>LearnHub</h1>
                 </div>
                 <div className='flex items-center gap-3'>
                     <Search />

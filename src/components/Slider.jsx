@@ -13,7 +13,7 @@ const HeroSlider = () => {
 
   const NextArrow = ({ onClick }) => (
   <div
-    className="absolute top-1/2 right-2 -translate-y-1/2 z-50 cursor-pointer text-white text-3xl font-bold"
+    className="absolute top-1/2 right-2 -translate-y-1/2 z-30 cursor-pointer text-white text-3xl font-bold"
     onClick={onClick}
   >
     ›
@@ -22,7 +22,7 @@ const HeroSlider = () => {
 
 const PrevArrow = ({ onClick }) => (
   <div
-    className="absolute top-1/2 left-2 -translate-y-1/2 z-50 cursor-pointer text-white text-3xl font-bold"
+    className="absolute top-1/2 left-2 -translate-y-1/2 z-30 cursor-pointer text-white text-3xl font-bold"
     onClick={onClick}
   >
     ‹

@@ -42,7 +42,9 @@ const Login = () => {
 };
 
   const handleGoogleLogin = async (credentialResponse) => {
+ 
     try {
+
       const res = await axios.post('https://learn-backend-1g6i.onrender.com/api/google-login', {
         token: credentialResponse.credential,
       });
@@ -73,17 +75,14 @@ const Login = () => {
         <span className='underline'>Sign Up</span>
         </Link>
       </div>
-                 <div className=' absolute  top-2'>
-        <Link to='/forgot-password' className='text-[12px] sm:text-[12px] font-semibold hover:underline text-[#6c63ff]'>
-         forgottenPassword?
-        </Link>
-      </div>
+                 
              
                   <section className='text-center pb-5 md:mt-15'> 
-                      <h1 className='font-semibold text-[1.7rem]'>Login 🔑</h1>
-                    <p className='lead'>Welcome back! Login to continue learning.</p>
+                      <h1 className='font-semibold text-center text-[1.7rem]'>Login 🔑</h1>
+                    <p className='text-[#4f46e5]  text-[1.1rem] font-semibold'>Welcome back! 🎉</p>
+                    <p  className='lead'> Login to continue learning.</p>
                   </section>
-                         <form onSubmit={handleSubmit} className='space-y-7'>
+                         <form onSubmit={handleSubmit} className='space-y-5'>
                 {message && ( 
                     <p className='text-center text-red-600'>{message}</p>
                 )}
@@ -139,7 +138,11 @@ const Login = () => {
                             { showPassword ? <EyeOff />  : <EyeClosed />}
                          </div>
                     </div>
-    
+                          <div className='w-full  text-end'>
+        <Link to='/forgot-password' className='text-[12px] sm:text-[12px] font-semibold hover:underline text-[#6c63ff]'>
+         ResetPassword?
+        </Link>
+      </div>
                     <button type='submit' className='border text-white font-semibold w-full py-2.5 rounded-[20px] bg-[#6c63ff] hover:bg-[rgba(108,99,255,0.8)] transition-colors'>{ showLoading ? <Loading /> : 'Login' }</button>
                     <div className='flex items-center justify-center gap-2  text-gray-600'>
                     <p className='border w-[25%] md:w-[23%]  lg:w-[32%] h-0'></p>
